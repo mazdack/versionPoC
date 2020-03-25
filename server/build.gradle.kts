@@ -1,16 +1,8 @@
 plugins {
     id("org.jetbrains.kotlin.jvm")
     `java-library`
-    id("pl.allegro.tech.build.axion-release") version "1.11.0"
-    `maven-publish`
+    id("pl.allegro.tech.build.axion-release")
 }
-scmVersion {
-    useHighestVersion = true
-    versionCreator("versionWithBranch")
-    versionIncrementer("incrementMinor")
-}
-
-project.version = scmVersion.version
 
 dependencies {
     // Align versions of all Kotlin components
