@@ -45,5 +45,5 @@ scmVersion {
     versionCreator("versionWithBranch")
     versionIncrementer("incrementMinor")
 }
-// DO NOT MOVE project.version in front of the scmVersion block !!!
+
 project.version = scmVersion.version

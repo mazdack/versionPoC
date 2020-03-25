@@ -8,3 +8,4 @@
  */
 
 rootProject.name = "versionPoC"
+include("api", "server")
