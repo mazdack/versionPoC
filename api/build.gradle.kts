@@ -25,3 +25,15 @@ dependencies {
     // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 }
+
+publishing {
+    repositories {
+        mavenLocal()
+    }
+    publications {
+        create<MavenPublication>("mavenLibrary") {
+            artifactId = "api"
+            from(components["java"])
+        }
+    }
+}
