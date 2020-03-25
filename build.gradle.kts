@@ -11,7 +11,14 @@ plugins {
 
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
+    `maven-publish`
 }
+publishing {
+    repositories {
+        mavenLocal()
+    }
+}
+
 
 repositories {
     // Use jcenter for resolving dependencies.
