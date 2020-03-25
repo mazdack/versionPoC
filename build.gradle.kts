@@ -7,7 +7,6 @@
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin.
     id("org.jetbrains.kotlin.jvm") version "1.3.61"
-    id("pl.allegro.tech.build.axion-release") version "1.11.0"
 
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
@@ -39,11 +38,3 @@ dependencies {
     // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 }
-
-scmVersion {
-    useHighestVersion = true
-    versionCreator("versionWithBranch")
-    versionIncrementer("incrementMinor")
-}
-
-project.version = scmVersion.version
