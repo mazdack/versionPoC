@@ -1,7 +1,7 @@
 plugins {
     id("org.jetbrains.kotlin.jvm")
-    `java-library`
     id("pl.allegro.tech.build.axion-release")
+    `java-library`
 }
 
 dependencies {
@@ -17,3 +17,5 @@ dependencies {
     // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 }
+
+version = scmVersion.version
