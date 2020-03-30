@@ -1,6 +1,5 @@
 plugins {
     id("org.jetbrains.kotlin.jvm")
-    id("pl.allegro.tech.build.axion-release")
     `java-library`
     `maven-publish`
 }
@@ -30,4 +29,3 @@ publishing {
         }
     }
 }
-version = scmVersion.version

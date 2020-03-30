@@ -14,12 +14,6 @@ plugins {
     `maven-publish`
 }
 
-scmVersion {
-    useHighestVersion = true
-    versionCreator("versionWithBranch")
-    versionIncrementer("incrementMinor")
-}
-
 publishing {
     repositories {
         mavenLocal()
@@ -32,4 +26,14 @@ allprojects {
         // You can declare any Maven/Ivy/file repository here.
         jcenter()
     }
+
+    apply(plugin = "pl.allegro.tech.build.axion-release")
+
+    scmVersion {
+        useHighestVersion = true
+        versionCreator("versionWithBranch")
+        versionIncrementer("incrementMinor")
+    }
+
+    version = scmVersion.version
 }
