@@ -23,13 +23,15 @@ publishing {
 }
 
 allprojects {
-    val myProject = this
     repositories {
         // Use jcenter for resolving dependencies.
         // You can declare any Maven/Ivy/file repository here.
         jcenter()
     }
+}
 
+subprojects {
+    val myProject = this
     apply(plugin = "pl.allegro.tech.build.axion-release")
 
     scmVersion {
